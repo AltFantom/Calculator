@@ -53,21 +53,14 @@ public class Calculator {
         System.out.println("Введите желаемую операцию");
         String operator = scanner.nextLine();
         switch (operator) {
-            case "+":
-                sum(firstNumber, secondNumber);
-                break;
-            case "-":
-                diff(firstNumber, secondNumber);
-                break;
-            case "*":
-                multiplication(firstNumber, secondNumber);
-                break;
-            case "/":
-                division(firstNumber, secondNumber);
-                break;
-            default:
+            case "+" -> sum(firstNumber, secondNumber);
+            case "-" -> diff(firstNumber, secondNumber);
+            case "*" -> multiplication(firstNumber, secondNumber);
+            case "/" -> division(firstNumber, secondNumber);
+            default -> {
                 System.out.println("Введенная операция не существует");
                 chooseOperator(firstNumber, secondNumber);
+            }
         }
     }
 }
